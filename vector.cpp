@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-void ReadNumber(vector <int>&vNumber){
+voidgit  ReadNumber(vector <int>&vNumber){
     int num = 0;
     char Choise;
     do {
