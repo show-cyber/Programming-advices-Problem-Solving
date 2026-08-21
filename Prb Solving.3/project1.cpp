@@ -22,7 +22,7 @@ private:
 public:
 	void MainMenu()
 	{
-		int Choise = 0;
+		signed short Choise = 0;
 		cout << "\033[2J\033[1;1H";
 		cout << "--------------------------------------" << endl
 			 << "         Main Menu Screen             " << endl
@@ -32,7 +32,8 @@ public:
 			 << "      [3] Delete Client" << endl
 			 << "      [4] Update Client Info" << endl
 			 << "      [5] Find Client" << endl
-			 << "      [6] Exit" << endl
+			 << "      [6] Transaction Menu" << endl
+			 << "      [7] Exit" << endl
 			 << "======================================" << endl
 			 << "Chose What Do You Want To Do [1 to 6]";
 		cin >> Choise;
@@ -54,14 +55,133 @@ public:
 			FindClient();
 			break;
 		case 6:
-			system("pause>0");
+			TransactionMenu();
+		case 7:
+			return;
 			break;
 		default:
 			cout << "Invalid Choise !" << endl;
-			system("pause>0");
+			return;
 		}
 	}
-	// Start Show LIst client
+	void TransactionMenu()
+	{
+		signed short choise = 0;
+		cout << "\033[2J\033[1;1H";
+		cout << "\n\n--------------------------------------\n"
+			 << "       Transaction Menu\n"
+			 << "--------------------------------------\n"
+		<< "      [1] Deposit\n"
+		<< "      [2] Whithdraw\n"
+		<< "      [3] Total Ballance\n"
+		<< "      [4] Main Menu\n"
+		<< "=======================================\n"
+		<< " Chose What Do You Want To Do [1 to 6]";
+		cin >> choise;
+		switch (choise)
+		{
+		case 1:
+			Deposit();
+			break;
+		case 2:
+			Whithdraw();
+			break;
+		case 3:
+			TotalBallance();
+			break;
+		case 4:
+			MainMenu();
+			break;
+		default:
+			cout << "Invalid Choise !" << endl;
+			return;
+		}
+	}
+	void TotalBallance(){
+		vector<UserInfo> VClient;
+		VClient = LoadDataFromFileToVector();
+		cout << "\033[2J\033[1;1H";
+		TransActionPrintAllClientsData(VClient);
+		cout << "\n Click Any Key To Return into Main Menu ...";
+		cin.ignore();
+		cin.get();
+		TransactionMenu();
+	}
+	void Whithdraw(){
+		cout << "\033[2J\033[1;1H";
+		vector<UserInfo> VClient;
+		UserInfo Info;
+		VClient = LoadDataFromFileToVector();
+		cout << "\n\n--------------------------------------\n"
+			 << "       Whithdraw Screen ...\n"
+			 << "--------------------------------------\n";
+		string accnumber = " ";
+		accnumber = ReadAccountNumber();
+		while ((FindUserById(accnumber, VClient, Info)) == false)
+		{
+			cout << "\nClient Witch " << accnumber << " does not exist !" << endl;
+			cin >> accnumber;
+		};
+		PrintTheList(Info);
+		int ammount = ReadWhithdrawAmmount();
+		ammount *= -1;
+		SaveAmmount(ammount, Info,VClient,accnumber,filename);
+		cout << "\n Click Any Key To Return into Main Menu ...";
+		cin.ignore();
+		cin.get();
+		TransactionMenu();
+	}
+	void Deposit()
+	{
+		cout << "\033[2J\033[1;1H";
+		vector<UserInfo> VClient;
+		UserInfo Info;
+		VClient = LoadDataFromFileToVector();
+		cout << "\n\n--------------------------------------\n"
+			 << "       Deposit Screen ...\n"
+			 << "--------------------------------------\n";
+		string accnumber = " ";
+		accnumber = ReadAccountNumber();
+		while ((FindUserById(accnumber, VClient, Info)) == false)
+		{
+			cout << "\nClient Witch " << accnumber << " does not exist !" << endl;
+			cout << "\n\nEnter Account Number :";
+			cin >> accnumber;
+		};
+		PrintTheList(Info);
+		int ammount = ReadDepositAmmount();
+		SaveAmmount(ammount, Info,VClient,accnumber,filename);
+		cout << "\n Click Any Key To Return into Main Menu ...";
+		cin.ignore();
+		cin.get();
+		TransactionMenu();
+	}
+	int ReadDepositAmmount()
+	{
+		int ammount = 0;
+		cout << "\nPlease Enter Deposit Ammount:";
+		cin >> ammount;
+		return ammount;
+	}
+	int ReadWhithdrawAmmount()
+	{
+		int ammount = 0;
+		cout << "\nPlease Enter Whithdraw Ammount:";
+		cin >> ammount;
+		return ammount;
+	}
+	void SaveAmmount(int ammount, UserInfo &Info,vector<UserInfo>VClient, string ID ,string filename)
+	{
+		Info.accountballance += ammount;
+		fstream UserFile;
+		UserFile.open(filename, ios::out);
+		if (UserFile.is_open())
+		{
+			deleteandupdateuserinfile(ID, VClient, Info, filename);
+			string text = PrintUserInfoInOneLine(Info);
+			CreateFile(Info, filename);
+		}
+	}
 	void ShowClientsList()
 	{
 		cout << "\033[2J\033[1;1H";
@@ -79,7 +199,7 @@ public:
 		UserInfo Info;
 		cout << "\033[2J\033[1;1H";
 		VClient = LoadDataFromFileToVector();
-		cout << "--------------------------------------\n"
+		cout << "\n\n--------------------------------------\n"
 			 << "       Finding Client ...\n"
 			 << "--------------------------------------\n";
 		string accnumber = ReadAccountNumber();
@@ -97,7 +217,7 @@ public:
 		cout << "\033[2J\033[1;1H";
 		vector<UserInfo> VClient;
 		VClient = LoadDataFromFileToVector();
-		cout << "--------------------------------------\n"
+		cout << "\n\n--------------------------------------\n"
 			 << "       Updating Client Info ...\n"
 			 << "--------------------------------------\n";
 		string accnumber = ReadAccountNumber();
@@ -166,7 +286,7 @@ public:
 	{
 		UserInfo Info;
 		cout << "\033[2J\033[1;1H";
-		cout << "--------------------------------------\n"
+		cout << "\n\n--------------------------------------\n"
 			 << "       Adding New Client ...\n"
 			 << "--------------------------------------\n"; // AddNewClient
 		ReadUserInfo(Info);
@@ -201,7 +321,38 @@ public:
 		cout << "_________________________________________\n"
 			 << endl;
 	}
-	// Finish Show Client Data
+	void TransActionPrintAllClientsData(vector<UserInfo> VClient)
+	{
+		cout << "\n\n\n\t\t\t\t\tClient List (" << VClient.size() << ")Client(s).";
+		cout
+			<< "\n_______________________________________________________";
+		cout << "_________________________________________\n"
+			 << endl;
+		cout << "| " << left << setw(15) << "Accout Number";
+		cout << "| " << left << setw(40) << "Client Name";
+		cout << "| " << left << setw(12) << "Balance";
+		cout << "\n_______________________________________________________";
+		cout << "_________________________________________\n"
+			 << endl;
+		for (UserInfo Client : VClient)
+		{
+			TransActionPrintClientRecord(Client);
+			cout << endl;
+		}
+		cout << "\n_______________________________________________________";
+		cout << "_________________________________________\n"
+			 << endl
+			 << "\t\tToTal Ballance :"
+			 << SumOfTotalBallance(VClient);
+	}
+	int SumOfTotalBallance(vector<UserInfo>VClient){
+		VClient = LoadDataFromFileToVector();
+		int sum = 0;
+		for (UserInfo& C : VClient){
+			sum += C.accountballance;
+		}
+		return sum;
+	}
 	void DeleteClient()
 	{
 		string ID = "";
@@ -290,7 +441,7 @@ public:
 	string ReadAccountNumber()
 	{
 		string accnumber = "";
-		cout << "Enter Account Number :";
+		cout << "\n\nEnter Account Number :";
 		cin >> accnumber;
 		return accnumber;
 	}
@@ -330,6 +481,12 @@ public:
 		cout << "| " << setw(10) << left << Info.accountpincode;
 		cout << "| " << setw(40) << left << Info.accountusername;
 		cout << "| " << setw(12) << left << Info.accountphonenumber;
+		cout << "| " << setw(12) << left << Info.accountballance;
+	}
+	void TransActionPrintClientRecord(UserInfo Info)
+	{
+		cout << "| " << setw(15) << left << Info.accountnumber;
+		cout << "| " << setw(40) << left << Info.accountusername;
 		cout << "| " << setw(12) << left << Info.accountballance;
 	}
 	void ReadUserInfo(UserInfo &Info)
