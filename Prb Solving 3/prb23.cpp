@@ -1,3 +1,9 @@
+/*
+ File: prb23.cpp
+ Description: A vector and string-related challenge.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

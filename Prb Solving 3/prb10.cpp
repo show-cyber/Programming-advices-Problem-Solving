@@ -1,3 +1,9 @@
+/*
+ File: prb10.cpp
+ Description: A beginner-level challenge in the problem-solving series.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

@@ -1,3 +1,9 @@
+/*
+ File: prb2.cpp
+ Description: A beginner problem based on logic and flow control.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

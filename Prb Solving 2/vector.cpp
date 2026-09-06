@@ -1,7 +1,13 @@
+/*
+ File: vector.cpp
+ Description: Demonstrates basic operations with vectors.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <vector>
 #include <iostream>
 using namespace std;
-voidgit  ReadNumber(vector <int>&vNumber){
+void  ReadNumber(vector <int>&vNumber){
     int num = 0;
     char Choise;
     do {

@@ -1,3 +1,9 @@
+/*
+ File: prb16.cpp
+ Description: A practical C++ exercise for learning syntax and flow.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

@@ -1,3 +1,9 @@
+/*
+ File: prb1.cpp
+ Description: A simple problem-solving exercise in C++.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 using namespace std;

@@ -1,3 +1,9 @@
+/*
+ File: prb6.cpp
+ Description: A short C++ training challenge for beginners.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

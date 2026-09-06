@@ -1,3 +1,9 @@
+/*
+ File: prb32.cpp
+ Description: A simple training program in the problem-solving series.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,3 +1,9 @@
+/*
+ File: prb46.cpp
+ Description: A problem-solving task for learning practical C++ coding.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>

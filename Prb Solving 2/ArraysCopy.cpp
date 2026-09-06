@@ -1,3 +1,9 @@
+/*
+ File: ArraysCopy.cpp
+ Description: Copies elements from one array to another using C++ logic.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <string>

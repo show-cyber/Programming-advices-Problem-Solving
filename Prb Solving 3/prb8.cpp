@@ -1,3 +1,9 @@
+/*
+ File: prb8.cpp
+ Description: A logic exercise using conditions and loops.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

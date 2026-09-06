@@ -1,3 +1,9 @@
+/*
+ File: ArraysSum.cpp
+ Description: Calculates and prints the sum of values in an array.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <string>

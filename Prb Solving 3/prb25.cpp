@@ -1,3 +1,9 @@
+/*
+ File: prb25.cpp
+ Description: A C++ exercise focused on arrays and logic.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,3 +1,9 @@
+/*
+ File: prb15.cpp
+ Description: A logic-based C++ challenge.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

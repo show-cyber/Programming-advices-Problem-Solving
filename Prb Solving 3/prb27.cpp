@@ -1,3 +1,9 @@
+/*
+ File: prb27.cpp
+ Description: A practice file for learning C++ fundamentals.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

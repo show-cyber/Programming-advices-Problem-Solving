@@ -1,3 +1,9 @@
+/*
+ File: FindPassFromAAAtoZZZ.cpp
+ Description: Generates password-like combinations from letters A to ZZZ.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 using namespace std;
 

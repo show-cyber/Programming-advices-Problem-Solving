@@ -1,3 +1,9 @@
+/*
+ File: prb24.cpp
+ Description: A basic problem involving data processing and output.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

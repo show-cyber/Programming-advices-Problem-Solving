@@ -1,3 +1,9 @@
+/*
+ File: prb4.cpp
+ Description: A basic C++ exercise focused on logic and output.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

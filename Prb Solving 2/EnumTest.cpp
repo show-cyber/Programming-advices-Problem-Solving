@@ -1,3 +1,9 @@
+/*
+ File: EnumTest.cpp
+ Description: Demonstrates the use of enums in C++.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 
 using namespace std;

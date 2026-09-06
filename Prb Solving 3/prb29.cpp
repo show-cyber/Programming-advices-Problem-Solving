@@ -1,3 +1,9 @@
+/*
+ File: prb29.cpp
+ Description: A C++ challenge designed to improve logic skills.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

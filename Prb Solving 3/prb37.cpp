@@ -1,3 +1,9 @@
+/*
+ File: prb37.cpp
+ Description: A general C++ exercise for practicing problem solving.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

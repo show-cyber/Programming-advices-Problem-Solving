@@ -1,3 +1,9 @@
+/*
+ File: prb45.cpp
+ Description: A beginner exercise exploring input and output logic.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <string>
 #include <limits>

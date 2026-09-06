@@ -1,3 +1,9 @@
+/*
+ File: prb47.cpp
+ Description: A logic exercise involving strings and program flow.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>

@@ -1,3 +1,9 @@
+/*
+ File: prb11.cpp
+ Description: A C++ exercise focused on loops and conditions.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

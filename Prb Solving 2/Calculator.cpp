@@ -1,3 +1,9 @@
+/*
+ File: Calculator.cpp
+ Description: Implements a basic calculator using arithmetic operators.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,9 @@
+/*
+ File: prb28.cpp
+ Description: A small algorithmic exercise in C++.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,3 +1,9 @@
+/*
+ File: prb9.cpp
+ Description: A small C++ program for practicing fundamentals.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>

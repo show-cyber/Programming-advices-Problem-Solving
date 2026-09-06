@@ -1,3 +1,9 @@
+/*
+ File: project1.cpp
+ Description: A project-style C++ exercise focused on practical logic.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <vector>
 #include <fstream>

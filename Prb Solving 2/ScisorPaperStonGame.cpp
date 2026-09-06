@@ -1,3 +1,9 @@
+/*
+ File: ScisorPaperStonGame.cpp
+ Description: Creates a simple rock-paper-scissors game.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <string>
 #include <cstdlib>

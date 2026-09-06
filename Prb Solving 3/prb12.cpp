@@ -1,3 +1,9 @@
+/*
+ File: prb12.cpp
+ Description: A simple training file for problem solving.
+ Purpose: This program was written to practice C++ logic, problem solving, and coding fundamentals.
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
